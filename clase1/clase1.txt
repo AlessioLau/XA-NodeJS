@@ -1,0 +1,23 @@
+Node: Entorno de ejecucion de codigo abierto y multiplataforma
+para crear aplicaciones de red y del lado del servidor rapidas y escalables
+
+Preguntas de clase 1
+Sus herramientas estan creadas en base a varios lenguajes como c++, python y js
+Node tiene acceso a el sistema operativo de la maquina
+JS no puede comunicarse con el sistema operativo dado que es un lenguaje de alto nivel
+NPM es un CLI (Command Line Interface) y un package manager
+Libreria fs viene instalada con node (para file system)
+El engine de js es el mismo que el de nodejs
+Diferencia entre fs.readFileSync y fs.readFile es que el sync espera a terminar de leerlo para devolverlo
+
+Ideal: Instalar linux y nvm para manejar las versiones de Node
+
+Npm: Gestor de dependencias y lineas de comandos para bajar esas dependencias
+
+Sistematic versioning
+    1.23.3
+    Major: Cambios incompatibles con la version anterior
+    Minor: Cambios compatibles con la major 
+    Patch: Cambios menores
+
+

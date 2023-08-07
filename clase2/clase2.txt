@@ -1,0 +1,30 @@
+Protocolo HTTP
+
+Codigos de respuesta
+    -De informacion (100 - 199)
+    -De exito (200-299)
+    -De redireccion (300-399)
+    -De error de cliente (400-499)
+    -De error de servidor (500-599)
+
+Libreria de node http para manejar servidor
+
+Libreria externa axios para manejo de rutas
+
+Preguntas
+
+HTTP es un protocolo de comunicaciones
+El metodo GET se usa para pedirle un recurso al servidor
+El metodo POST se usa para enviar datos, enviar datos de un formulario y para señalar un cambio de estado al servidor
+La Libreria http de NodeJS no necesita un paquete de NPM
+Se puede actualizar un recurso del servidor con PUT 
+Con la llamada a la funcion http.createServer no es suficiente para tener un servidor corriendo, debido que se necesita un listen en un puerto
+Cuando un error en la informacion que envia el cliente (browser) el servidor devuelve una respuesta con codigo 4XX
+Para borrar un recurso del servidor se envia un mensaje con el metodo DELETE a la url del recurso
+El orden correcto de las llamadas para iniciar el servidor es
+    const server = http.createServer((req, res) => {
+        res.writeHead(200, {'Content-Type':'text/html'});
+        res.end('<head></head><body><h1>Holi<h1><body>');
+    });
+    server.listen(8081, () => console.log('Listening...'));
+Si una llamada HTTP fue exitosa el servidor devuelve un mensaje con un codigo en el rango 2XX
