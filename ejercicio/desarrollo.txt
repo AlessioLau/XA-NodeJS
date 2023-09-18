@@ -1,0 +1,31 @@
+Seguimiento de pasos del desarrollo
+
+Infraestructura NodeJS Express, Sequelize Y Passport
+SQLite Motor de BD
+
+//Instalacion de Dependencias
+Necesario npm, instalar NodeJS o nvm para manejar las versiones de node
+*npm init
+
+Construccion de API con framework express
+*npm install express
+
+Para manejo de la base de datos instalacion de motor sqlite3 y ORM sequelize
+*npm install sequelize sqlite3
+
+Instalacion de nodemon para guardar automaticamente cambios en archivos
+*npm install nodemon
+
+Para manejo de tokens passport y jwt
+*npm install passport jwt
+
+//Desarrollo aplicacion
+Creacion de carpeta src y archivo app.js para hacer la base
+
+Exportacion de express y uso de const app para manejar la API
+app.use para usar recursos
+app.listen para iniciar el server
+
+*Creacion de modelos y base de datos
+Creacion de config y db-config
+Creacion de carpeta models y de entidades Libreria y Libro

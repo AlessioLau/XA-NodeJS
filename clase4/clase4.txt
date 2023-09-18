@@ -1,0 +1,18 @@
+ORM (Objet-relational mapping)
+    Mappeo relacional de objetos
+    Permite que una clase se mapee a una tabla de la base de Datos
+    Encapsula la conexion a la base de datos, es una abstraccion
+
+
+Sequelize
+    ORM basado en SQL para nodeJS
+
+sqlite3 Engine de base de datos para levantarlas en memoria
+
+Providers
+    Se encargan de la llamada de los servicios externos estos no tienen logica de negocio ya que 
+    su unica tarea tiene que ser llamar a cualquier recurso externo a nuestra api  
+    Intermediario entre modelo y base de datos
+
+
+Boilerplate = estructura de codigo con carpetas 

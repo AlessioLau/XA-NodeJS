@@ -1,0 +1,54 @@
+Patron mediador
+https://refactoring.guru/design-patterns/mediator
+
+Middleware
+    Manejo de una ruta y su recurso 
+    Responde a un manejo de ruta
+    No finalizan el ciclo de llamada se pueden anidar
+
+    Tipos
+        De aplicacion: Se ejecuta siempre
+        De ruta: Actuan directamente sobre la ruta de un recurso (ruta y medoto)
+        De manejo de errores: Al enconrtrase una excepcion se ejecutan
+        Incorporados a express: EJ parsear JSON (JSON.parse)
+        De terceros: Librerias externas EJ: JWT Asegura autenticacion por ej
+
+Estructura:
+
+Routes
+Controllers
+Services
+Providers
+Middleware
+Utils
+Helpers
+
+
+Routes (Rutas): Las rutas en Express son encargadas de definir cómo responderá tu aplicación a las solicitudes entrantes de diferentes URL 
+(endpoints). En esencia, las rutas son el mapa que guía la navegación a través de tu aplicación. Puedes definir rutas para diferentes métodos 
+HTTP como GET, POST, PUT, DELETE, etc. Cada ruta se asocia con un controlador que maneja la lógica específica para esa ruta.
+
+Controllers (Controladores): Los controladores son módulos que contienen la lógica de manejo de las solicitudes. Son responsables de procesar 
+los datos recibidos de las solicitudes, interactuar con la base de datos si es necesario y enviar una respuesta apropiada. Los controladores 
+ayudan a mantener tus rutas limpias y organizadas al separar la lógica de manejo de la lógica de enrutamiento.
+
+Services (Servicios): Los servicios son componentes que encapsulan lógica de negocio específica y generalmente se utilizan para realizar operaciones 
+más complejas que pueden involucrar múltiples acciones o consultas a la base de datos. Los controladores pueden utilizar servicios para mantener un 
+código más limpio y modular, permitiendo la reutilización de la lógica en diferentes partes de la aplicación.
+
+Providers: En el contexto de Express, el término "Providers" no es un concepto estándar, por lo que no puedo proporcionar una explicación precisa. 
+Sin embargo, a menudo se utiliza para referirse a módulos que ofrecen funcionalidades específicas para la aplicación, como autenticación, manejo de 
+sesiones, integración con servicios externos, etc.
+
+Middleware: Los middlewares son funciones que se ejecutan antes de que la solicitud llegue a su controlador. Permiten realizar tareas como la validación 
+de datos, la autenticación, la manipulación del cuerpo de la solicitud, el registro de solicitudes, entre otros. Los middlewares pueden aplicarse a nivel
+ de aplicación, a rutas específicas o incluso a nivel de método HTTP.
+
+Utils (Utilidades): Las utilidades son funciones o módulos que proporcionan funcionalidades auxiliares que pueden ser reutilizadas en diferentes partes 
+de la aplicación. Por ejemplo, funciones para el formateo de fechas, generación de tokens, manejo de errores genéricos, etc.
+
+Helpers: Los helpers también son funciones auxiliares, pero a menudo se asocian con la manipulación de vistas o plantillas en aplicaciones que utilizan 
+un motor de plantillas (como Pug o EJS). Los helpers pueden usarse para generar contenido dinámico en las vistas, como formatear fechas, mostrar datos condicionalmente, etc.
+
+Estos conceptos trabajan en conjunto para construir una aplicación Express bien organizada y mantenible. La separación de responsabilidades entre rutas, 
+controladores, servicios, middlewares y utilidades ayuda a mantener un código limpio, modular y fácil de mantener.

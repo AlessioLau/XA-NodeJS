@@ -1,0 +1,34 @@
+ORM permite establecer un mapeo entre las entidades de la base de datos y los objetos
+Sequelize es una libreria  
+Los modelos de datos son manejados por el ORM
+Para definir un modelo con Sequelize se usa sequelize.define('NombreModelo', {...campos});
+Cada campo del modelo tiene que tener una correlacion con un campo de la DB
+
+    const sequelize = new Sequelize({datos de la db}) //instancia de clase
+    await sequelize.authenticate(); //autenticar la instancia
+    await sequelize.sync({force: false}); //sincronizar modelos
+    sequelize.define('Model', {campos});
+
+findAll, findByPk para buscar objetos
+Model.create(obj) para crear un objeto
+
+
+Autenticacion
+    Como usuarios de backend le decimos a la aplicacion que podemos comunicarno con la base de datos
+    Hay 2 formas de hacerlo
+        Externas la maneja el cliente al auth
+        Con sesion en servidor, permanece en la sesion
+
+    JSON Web Token JWT (Externa, no guarda sesion)
+        Header (Algorithm y token type)
+        Payload (Data)
+        Verify Signature (Firma)
+
+        Hash encriptacion que no puede revertirse (solo el que conoce el algoritmo)
+
+    Auth en NodeJS con passport
+        npm install --save passport passport-jwt
+        
+
+
+        
